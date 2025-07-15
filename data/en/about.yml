@@ -1,0 +1,7 @@
+# data/about.yml
+---
+about:
+  enable: true
+  title: "The Unmet Clinical Need"
+  image: "images/about/about-us.jpg" # Placeholder image
+  content: "Age-related bone diseases, such as osteoporosis and osteoarthritis, are major causes of morbidity and reduced quality of life. Current therapies ignore the crucial vascular environment and lack safe, long-term anabolic options, leaving millions vulnerable to fragile bones and impaired healing."

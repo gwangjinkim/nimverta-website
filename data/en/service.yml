@@ -1,0 +1,17 @@
+# data/service.yml
+---
+service:
+  enable: true
+  title: "Our Technology"
+  service_item:
+    - name: "First-in-Class Peptide"
+      icon: "ion-erlenmeyer-flask-bubbles" # Icon from ionicons
+      content: "A novel therapy designed to regenerate both bone tissue and its supporting blood vessels."
+
+    - name: "Leveraging Natural Pathways"
+      icon: "ion-leaf"
+      content: "Our approach works with the body's own physiological systems to promote safe and effective healing."
+
+    - name: "Safe, Long-Term Treatment"
+      icon: "ion-ios-medkit"
+      content: "Unlocking the potential for a therapy that can be administered over the long term without compromising safety."

@@ -1,0 +1,18 @@
+############################### team ############################
+# data/team.yml
+---
+team:
+  enable: true
+  title: "Our Leadership"
+  team_member:
+    - name: "Dr. Amit Singh"
+      image: "images/team/1.jpg" # Replace with actual photo
+      designation: "Founder & CEO"
+
+    - name: "Rob Chisholm"
+      image: "images/team/2.jpg" # Replace with actual photo
+      designation: "Chief Business Officer (CBO)"
+
+    - name: "Prof. Anjali Kusumbe"
+      image: "images/team/3.jpg" # Replace with actual photo
+      designation: "Chief Scientific Officer (CSO)"

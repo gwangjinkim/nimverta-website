@@ -1,0 +1,18 @@
+#################################### portfolio ###############################
+# data/portfolio.yml
+---
+portfolio:
+  enable: true
+  title: "Market Opportunity"
+  portfolio_item:
+    - name: "Osteoporosis Market"
+      image: "images/portfolio/1.jpg"
+      categories: ["USD $15 Billion"]
+      
+    - name: "Hypophosphatasia Market"
+      image: "images/portfolio/2.jpg"
+      categories: ["USD $4 Billion"]
+
+    - name: "Paget’s Disease Market"
+      image: "images/portfolio/3.jpg"
+      categories: ["USD $1 Billion"]

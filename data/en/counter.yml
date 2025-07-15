@@ -1,0 +1,16 @@
+# data/counter.yml
+---
+counter:
+  enable: true
+  counter_item:
+    - name: "Osteoporosis"
+      count: "15"
+      unit: "Billion"
+
+    - name: "Hypophosphatasia"
+      count: "4"
+      unit: "Billion"
+
+    - name: "Paget’s Disease"
+      count: "1"
+      unit: "Billion"

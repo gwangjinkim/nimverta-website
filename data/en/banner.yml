@@ -1,0 +1,11 @@
+# data/banner.yml
+---
+banner:
+  enable: true
+  title: "A Next-Generation Approach to Bone Regeneration"
+  content: "Nimverta is developing a first-in-class peptide therapy that regenerates both bone and its supporting vasculature, unlocking the potential for safe, long-term treatment."
+  image: "images/banner.jpg" # Placeholder image
+  button:
+    enable: true
+    label: "Discover Our Science"
+    URL: "#service"
