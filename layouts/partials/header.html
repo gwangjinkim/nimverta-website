@@ -42,7 +42,7 @@
           {{ $node := . }}
           {{ .Scratch.Set "language" .Language.Lang }}
           <li class="nav-item">
-            {{ template "language-list.html" . }}
+            {{ partial "language-list.html" . }}
           </li>
           {{ end }}
         </ul>
