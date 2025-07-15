@@ -4,4 +4,9 @@ min = "0.147.2"
 
 
 [[imports]]
-path = "github.com/gethugothemes/hugo-modules/images"
+  # This is the main Meghna theme module
+  path = "github.com/themefisher/meghna-hugo"
+
+[[imports]]
+  # This is the theme's required dependency for image handling
+  path = "github.com/gethugothemes/hugo-modules/images"
