@@ -1,0 +1,52 @@
+<!-- This file is located at layouts/partials/header.html -->
+<!-- It overrides the theme's original header to fix a compatibility issue. -->
+<header class="navigation">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
+        {{ with .Site.Params.logo }}
+          <img src="{{ . | absURL }}" alt="{{ .Site.Title }}">
+        {{ end }}
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              {{ .Name }}
+            </a>
+            <div class="dropdown-menu">
+              {{ range .Children }}
+              <a class="dropdown-item" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </li>
+          {{ else }}
+          <li class="nav-item {{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+            <a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+          {{ end }}
+
+          <!-- Language List -->
+          {{ if hugo.IsMultilingual }}  <!-- THIS IS THE ONLY LINE THAT HAS BEEN CHANGED -->
+          {{ $node := . }}
+          {{ .Scratch.Set "language" .Language.Lang }}
+          <li class="nav-item">
+            {{ template "language-list.html" . }}
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
