@@ -1,11 +1,11 @@
 <!-- This file is located at layouts/partials/language-list.html -->
 <div class="dropdown">
   <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    {{ .Site.Language.LanguageName }}
+    {{ site.Language.LanguageName }}
   </a>
   <div class="dropdown-menu">
-    {{ range .Site.Languages }}
-    {{ if ne .LanguageName $.Site.Language.LanguageName }}
+    {{ range site.Languages }}
+    {{ if ne .LanguageName site.Language.LanguageName }}
     <a class="dropdown-item" href="{{ .Lang | absURL }}">{{ .LanguageName }}</a>
     {{ end }}
     {{ end }}

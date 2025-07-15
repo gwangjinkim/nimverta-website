@@ -3,9 +3,9 @@
 <header class="navigation">
   <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light">
-      <a class="navbar-brand" href="{{ .Site.BaseURL | relLangURL }}">
-        {{ with .Site.Params.logo }}
-          <img src="{{ . | absURL }}" alt="{{ .Site.Title }}">
+      <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
+        {{ with site.Params.logo }}
+          <img src="{{ . | absURL }}" alt="{{ site.Title }}">
         {{ end }}
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -17,7 +17,7 @@
         <ul class="navbar-nav ml-auto">
 
           {{ $currentPage := . }}
-          {{ range .Site.Menus.main }}
+          {{ range site.Menus.main }}
           {{ if .HasChildren }}
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -38,6 +38,7 @@
           {{ end }}
 
           <!-- Language List -->
+{{/*
           {{ if hugo.IsMultilingual }}  <!-- THIS IS THE ONLY LINE THAT HAS BEEN CHANGED -->
           {{ $node := . }}
           {{ .Scratch.Set "language" .Language.Lang }}
@@ -45,6 +46,7 @@
             {{ partial "language-list.html" . }}
           </li>
           {{ end }}
+*/}}
         </ul>
       </div>
     </nav>
